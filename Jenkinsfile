@@ -5,12 +5,6 @@ pipeline {
     }
 
     stages {
-        stage('cleanup') {
-            steps {
-                deleteDir()
-            }
-        }
-
         stage('install') {
             steps {
                 sh 'yarn'
