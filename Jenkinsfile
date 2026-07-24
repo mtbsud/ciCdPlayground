@@ -5,9 +5,11 @@ pipeline {
     }
 
     stages {
-        post {
-            always {
-                cleanWs()
+        stage('cleanup') {
+            post {
+                always {
+                    cleanWs()
+                }
             }
         }
 
