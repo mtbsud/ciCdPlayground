@@ -35,3 +35,14 @@ jobs:
       if: success() || failure() # always run even if the previous step fails
       with:
         report_paths: '**/reports/test-results/test/TEST-*.xml'
+    - name: Checkout  
+      uses: actions/checkout@v2  
+      with:  
+          fetch-depth: 0
+    - name: Version
+      id: version  
+      uses: juliansangillo/tag-version@v1  
+      with:  
+          production-branch: master  
+          test-branch: test  
+          dev-branch: develop  
