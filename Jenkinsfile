@@ -7,7 +7,7 @@ pipeline {
     stages {
         stage('cleanup') {
             steps {
-                cleanWs()
+                deleteDir()
             }
         }
 
