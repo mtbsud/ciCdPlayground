@@ -6,10 +6,8 @@ pipeline {
 
     stages {
         stage('cleanup') {
-            post {
-                always {
-                    cleanWs()
-                }
+            steps {
+                cleanWs()
             }
         }
 
