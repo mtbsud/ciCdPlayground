@@ -5,6 +5,12 @@ pipeline {
     }
 
     stages {
+        post {
+            always {
+                cleanWs()
+            }
+        }
+
         stage('install') {
             steps {
                 sh 'yarn'
